@@ -1,0 +1,52 @@
+.hero {
+    position: relative;
+    min-width: 1200px;
+    padding: 200px 0;
+    margin: 0 auto;
+    text-align: center;
+  
+    background-color: $back-grey;
+    background-image: url(../images/people-work.jpg);
+  
+    &__overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+  
+      transition: background-color $animation-duration $animation-timing-function;
+    }
+  
+    &:hover .hero__overlay {
+      background-color: rgba(47, 48, 58, 0.4);
+    }
+  
+    &__title {
+      position: relative;
+      margin: 0 0 30px 0;
+  
+      color: $text-white;
+      font-weight: 900;
+      font-size: 44px;
+      line-height: 1.36;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      z-index: 1;
+    }
+  
+    &__btn {
+      position: relative;
+      padding: 10px 32px;
+  
+      line-height: 1.88;
+      letter-spacing: 0.06em;
+  
+      transition: background-color $animation-duration $animation-timing-function;
+      z-index: 1;
+    }
+  
+    &__btn:active {
+      background-color: #188ce8;
+    }
+  }

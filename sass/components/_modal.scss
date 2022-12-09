@@ -1,0 +1,209 @@
+
+.backdrop {
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    visibility: visible;
+    opacity: 1;
+  
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: opacity $animation-duration $animation-timing-function,
+      visibility $animation-duration $animation-timing-function;
+  }
+  
+  .backdrop.backdrop--is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  
+    .modal {
+      transform: translate(-50%, -50%) scale(0.6);
+    }
+  }
+  
+  .modal {
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    min-width: 528px;
+    min-height: 581px;
+  
+    background-color: $text-white;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+  
+    &__close-btn {
+      @extend %centering-for-flex;
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      top: 8px;
+      right: 8px;
+  
+      background-color: transparent;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 50%;
+  
+      transition: fill $animation-duration $animation-timing-function;
+    }
+  
+    &__close-btn:hover,
+    &__close-btn:focus {
+      fill: $activity-blue;
+    }
+  
+    &__title {
+      margin-bottom: 12px;
+  
+      font-weight: 700;
+      font-size: 20px;
+      line-height: calc(23 / 20);
+      text-align: center;
+      letter-spacing: 0.03em;
+      color: $text-main;
+    }
+  
+    &__box {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      margin-bottom: 10px;
+  
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: calc(14 / 12);
+      letter-spacing: 0.01em;
+      color: $text-grey;
+    }
+  
+    &__name {
+      margin-bottom: 4px;
+    }
+  
+    &__field {
+      padding-left: 42px;
+      height: 40px;
+  
+      border: 1px solid rgba(33, 33, 33, 0.2);
+      border-radius: 4px;
+  
+      transition: border-color $animation-duration $animation-timing-function;
+    }
+  
+    &__field:hover,
+    &__field:focus,
+    &__comment:hover,
+    &__comment:focus {
+      border-color: $activity-blue;
+    }
+  
+    &__field:hover + &__svg,
+    &__field:focus + &__svg {
+      fill: $activity-blue;
+    }
+  
+    &__svg {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      position: absolute;
+      top: 29px;
+      left: 12px;
+  
+      transition: fill $animation-duration $animation-timing-function;
+    }
+  
+    &__comment {
+      padding: 12px 16px;
+  
+      resize: none;
+      border: 1px solid rgba(33, 33, 33, 0.2);
+      border-radius: 4px;
+      color: rgba(117, 117, 117, 0.5);
+  
+      transition: border $animation-duration $animation-timing-function;
+    }
+  
+    &__comment::placeholder {
+      color: rgba(117, 117, 117, 0.5);
+    }
+  
+    &__box-confirm {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      margin-bottom: 30px;
+  
+      font-size: 14px;
+      line-height: calc(24 / 14);
+      letter-spacing: 0.03em;
+      color: $text-grey;
+    }
+  
+    &__box-comment {
+      margin-bottom: 20px;
+    }
+  
+    &__link {
+      color: $activity-blue;
+    }
+  
+    &__box-btn {
+      display: flex;
+      justify-content: center;
+    }
+    &__confirm {
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      border: 0;
+      padding: 0;
+  
+      white-space: nowrap;
+      clip-path: inset(100%);
+      clip: rect(0 0 0 0);
+      overflow: hidden;
+    }
+  
+    &__confirm:checked + &__check-svg {
+      background-color: $activity-blue;
+      border: 1px solid $activity-blue;
+      border-radius: 2px;
+    }
+  
+    &__check-svg {
+      position: absolute;
+      top: 50%;
+      left: 5px;
+      transform: translateY(-50%);
+  
+      background-color: $text-white;
+      border: 2px solid $text-main;
+      border-radius: 2px;
+    }
+  }
+  
+  .form-btn {
+    padding: 10px 52px;
+  
+    line-height: calc(30 / 16);
+    letter-spacing: 0.06em;
+  
+    transition: box-shadow $animation-duration $animation-timing-function,
+      background-color $animation-duration $animation-timing-function;
+  
+    &:hover,
+    &:focus,
+    &:active {
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+      background-color: #188ce8;
+    }
+  }
+  

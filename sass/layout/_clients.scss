@@ -1,0 +1,39 @@
+
+.clients {
+    width: 1200px;
+    padding-top: 94px;
+    margin: 0 auto;
+  
+    &__list {
+      display: flex;
+      justify-content: center;
+      margin: -15px;
+    }
+  
+    &__item {
+      width: calc((100% - 5 * 30px) / 6);
+      margin: 15px;
+    }
+  
+    &__link {
+      @extend %centering-for-flex;
+      height: 92px;
+  
+      color: $icon-grey;
+      border: 1px solid rgba(175, 177, 184, 1);
+      border-radius: 4px;
+  
+      transition: color $animation-duration $animation-timing-function,
+        border $animation-duration $animation-timing-function;
+    }
+  
+    &__link:hover,
+    &__link:focus {
+      border: 1px solid $activity-blue;
+      color: $activity-blue;
+    }
+  
+    &__icon {
+      fill: currentColor;
+    }
+  }

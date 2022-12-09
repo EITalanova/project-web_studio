@@ -1,0 +1,57 @@
+
+.about-us {
+    width: 1200px;
+    display: flex;
+    padding-top: 94px;
+    margin: 0 auto;
+  
+    &__title {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      border: 0;
+      padding: 0;
+  
+      white-space: nowrap;
+      clip-path: inset(100%);
+      clip: rect(0 0 0 0);
+      overflow: hidden;
+    }
+  
+    &__table {
+      display: flex;
+      margin: -15px;
+    }
+  
+    &__box {
+      @extend %centering-for-flex;
+      height: 120px;
+      margin-bottom: 30px;
+  
+      background-color: $back-lgrey;
+    }
+  
+    &__item {
+      margin: 15px;
+    }
+  
+    &__advantage {
+      margin-bottom: 10px;
+  
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 1.14;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+  
+    &__details {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1.71;
+      letter-spacing: 0.03em;
+  
+      color: $text-grey;
+    }
+  }
