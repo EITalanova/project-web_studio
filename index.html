@@ -37,7 +37,6 @@
               <a class="menu__link link" href="#footer">Контакти</a>
             </li>
           </ul>
-          
         </nav>
 
         <ul class="contact__list">
@@ -66,13 +65,66 @@
             >
           </li>
         </ul>
-        <button class="menu__btn">
+      
+
+
+        <button class="menu__btn js-open-menu" aria-controls="mobile-menu">
           <svg width="40" height="40">
             <use href="./images/icons.svg#icon-menu"></use>
           </svg>
         </button>
       </div>
+
+
+
+      <div class="menu-box js-menu-container is-open" id="mobile-menu">
+        <ul class="menu-box__list">
+          <li class="menu-box__item">
+            <a class="menu-box__link menu__link-active link" href=""
+              >Студія</a
+            >
+          </li>
+          <li class="menu-box__item">
+            <a class="menu-box__link link" href="./portfolio.html">Портфоліо</a>
+           
+          </li>
+          <li class="menu-box__item">
+            <a class="menu-box__link link" href="">Контакти</a>
+          </li>
+        </ul>
+
+       
+     <div class="menu-box__contacts">
+          <a class="menu-box__tel link" href="tel:+380961111111">
+            +38 096 111 11 11</a>
+       
+            <a class="menu-box__mail link" href="mailto:info@devstudio.com">
+              info@devstudio.com</a>
+        
+
+<ul class="box-social">
+  <li class="box-social__item"><a href="" class="box-social__link link">Instagram</a></li>
+  <li class="box-social__item"><a href="" class="box-social__link link">Twitter</a></li>
+  <li class="box-social__item"><a href="" class="box-social__link link">Facebook</a></li>
+  <li class="box-social__item"><a href="" class="box-social__link link">LinkedIn</a></li>
+</ul>
+
+</div>
+
+<button class="box__close-btn js-close-menu" type="button">
+  <svg class="box__img" width="18" height="18">
+    <use href="./images/icons.svg#icon-box-close"></use>
+  </svg>
+</button>
+
+
+      </div>
     </header>
+
+
+
+
+
 
     <main class="main">
       <section class="hero" id="hero">
@@ -158,7 +210,7 @@
           <li class="what-we-do__item">
             <img
               class="what-we-do__img"
-              src="./images/work.jpg"
+              src="./images/what-we-do/work.jpg"
               alt="Праця з кодом на планшеті"
               height="294"
               width="370"
@@ -170,7 +222,7 @@
           <li class="what-we-do__item">
             <img
               class="what-we-do__img"
-              src="./images/tablet.jpg"
+              src="./images/what-we-do/tablet.jpg"
               alt="Адаптація мобільного додатку на планшеті"
               height="294"
               width="370"
@@ -182,7 +234,7 @@
           <li class="what-we-do__item">
             <img
               class="what-we-do__img"
-              src="./images/colors.jpg"
+              src="./images/what-we-do/colors.jpg"
               alt="Палітра кольорів на планшеті"
               height="294"
               width="370"
@@ -200,17 +252,15 @@
           <ul class="team__list">
             <li class="team__item">
               <picture>
-                <source
-                  srcset="./images/demianenko.jpg 480w, ./images/demianenko@2x.jpg 481w"
-                  type="image/jpeg"
-                  media="(max-width: 480px) 450px, (min-width: 481px) 354px"
-                 
-                />
-          
-                
-
-                <img src="./images/demianenko.jpg" alt="Ігор Дем'яненко" />
+                <source srcset="./images/teams/demianenko-desktop.jpg 1x, ./images/teams/demianenko-desktop@2x.jpg 2x"
+                media="(min-width: 1200px)">
+                <source srcset="./images/teams/demianenko-tablet.jpg 1x, ./images/teams/demianenko-tablet@2x.jpg 2x"
+                media="(min-width: 768px)">
+                <source srcset="./images/teams/demianenko.jpg 1x, ./images/teams/demianenko@2x.jpg 2x"
+                media="(max-width: 767px)">
+                <img src="./images/teams/demianenko-desktop.jpg" alt="фото_дизайнера" max-width="450" max-height="460">
               </picture>
+       
               <div class="team__info">
                 <h3 class="team__name">Ігор Дем'яненко</h3>
                 <p class="team__post" lang="en">Product Designer</p>
@@ -262,16 +312,16 @@
 
             <li class="team__item">
               <picture>
-                <source
-                  srcset="./images/repina.jpg 480w, ./images/repina@2x.jpg 481w"
-                  type="image/jpeg"
-                  media="(max-width: 480px) 450px, (min-width: 481px) 354px"
-                />
-
-
-                <img src="./images/repina.jpg" alt="Ігор Дем'яненко" />
+                <source srcset="./images/teams/repina-desktop.jpg 1x, ./images/teams/repina-desktop@2x.jpg 2x"
+                media="(min-width: 1200px)">
+                <source srcset="./images/teams/repina-tablet.jpg 1x, ./images/teams/repina-tablet@2x.jpg 2x"
+                media="(min-width: 768px)">
+                <source srcset="./images/teams/repina.jpg 1x, ./images/teams/repina@2x.jpg 2x"
+                media="(max-width: 767px)">
+                <img src="./images/teams/repina-desktop.jpg" alt="фото_дизайнера" max-width="450" max-height="460">
               </picture>
-      
+              
+
               <div class="team__info">
                 <h3 class="team__name">Ольга Репіна</h3>
                 <p class="team__post" lang="en">Frontend Developer</p>
@@ -326,16 +376,16 @@
 
             <li class="team__item">
               <picture>
-                <source
-                  srcset="./images/tarasov.jpg 480w, ./images/tarasov@2x.jpg 481w"
-                  type="image/jpeg"
-                  media="(max-width: 480px) 450px, (min-width: 481px) 354px"
-                />
-              
-
-                <img src="./images/tarasov.jpg" alt="Ігор Дем'яненко" />
+                <source srcset="./images/teams/tarasov-desktop.jpg 1x, ./images/teams/tarasov-desktop@2x.jpg 2x"
+                media="(min-width: 1200px)">
+                <source srcset="./images/teams/tarasov-tablet.jpg 1x, ./images/teams/tarasov-tablet@2x.jpg 2x"
+                media="(min-width: 768px)">
+                <source srcset="./images/teams/tarasov.jpg 1x, ./images/teams/tarasov@2x.jpg 2x"
+                media="(max-width: 767px)">
+                <img src="./images/teams/tarasov-desktop.jpg" alt="фото_дизайнера" max-width="450" max-height="460">
               </picture>
-          
+       
+
               <div class="team__info">
                 <h3 class="team__name">Микола Тарасов</h3>
                 <p class="team__post" lang="en">Marketing</p>
@@ -390,16 +440,18 @@
 
             <li class="team__item">
               <picture>
-                <source
-                  srcset="./images/ermakov.jpg 480w, ./images/ermakov@2x.jpg 481w"
-                  type="image/jpeg"
-                  media="(max-width: 480px) 450px, (min-width: 481px) 354px"
-                />
-           
-
-                <img src="./images/ermakov.jpg" alt="Ігор Дем'яненко" />
+                <source srcset="/images/teams/ermakov-desktop.jpg 1x, ./images/teams/ermakov-desktop@2x.jpg 2x"
+                media="(min-width: 1200px)">
+                <source srcset="./images/teams/ermakov-tablet.jpg 1x, ./images/teams/ermakov-tablet@2x.jpg 2x"
+                media="(min-width: 768px)">
+                <source srcset="./images/teams/ermakov.jpg 1x, ./images/teams/ermakov@2x.jpg 2x"
+                media="(max-width: 767px)">
+                <img src="./images/teams/ermakov-desktop.jpg" alt="фото_дизайнера" max-width="450" max-height="460">
               </picture>
+            
+
           
+
               <div class="team__info">
                 <h3 class="team__name">Михайло Єрмаков</h3>
                 <p class="team__post" lang="en">UI Designer</p>
@@ -503,7 +555,7 @@
           </li>
         </ul>
       </section>
-      -->
+   
     </main>
 
     <footer class="footer" id="footer">
@@ -600,7 +652,7 @@
         </div>
       </section>
     </footer>
-    <!-- 
+
     <div class="backdrop backdrop--is-hidden" data-modal>
       <div class="modal">
         <button class="modal__close-btn" type="button" data-modal-close>
@@ -658,7 +710,7 @@
             <svg class="modal__check-svg" width="18" height="18">
               <use href="./images/icons.svg#icon-check"></use>
             </svg>
-            <span>
+            <span class="modal__description">
               Погоджуюся з розсилкою та приймаю
               <a class="modal__link" href="">Умови договору</a>
             </span>
@@ -670,6 +722,7 @@
         </form>
       </div>
     </div>
-    <script src="./js/modal.js"></script>-->
+    <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

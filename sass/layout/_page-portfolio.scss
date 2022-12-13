@@ -1,17 +1,10 @@
-@media screen and (min-width: $mobile) and (max-width: 767px) {
-}
-@media screen and (min-width: $tablet) and (max-width: 1199px) {
-}
-@media screen and (min-width: $desktop) {
-}
-
 .portfolio {
   border-top: 1px solid rgba(236, 236, 236, 1);
 
   &__container {
     margin: 0 auto;
     padding: 60px 15px;
-    @media screen and (min-width: $mobile) and (max-width: 767px) {
+    @media screen and (min-width: $premobile) and (max-width: 767px) {
       width: 480px;
     }
     @media screen and (min-width: $tablet) and (max-width: 1199px) {
@@ -27,24 +20,20 @@
 .filter {
   &__list {
     display: flex;
+    justify-content: center;
     gap: 15px 8px;
     padding: 0;
-    @media screen and (min-width: $mobile) and (max-width: 767px) {
+    @media screen and (min-width: $premobile) and (max-width: 767px) {
       justify-content: start;
       flex-wrap: wrap;
       max-width: 326px;
       margin-bottom: 40px;
     }
     @media screen and (min-width: $tablet) and (max-width: 1199px) {
-      justify-content: center;
       margin-bottom: 30px;
     }
     @media screen and (min-width: $desktop) {
-      
-      justify-content: center;
-      
       margin: 0 0 50px 0;
-      
     }
   }
 
@@ -61,17 +50,6 @@
     transition: box-shadow $animation-duration $animation-timing-function,
       color $animation-duration $animation-timing-function,
       background-color $animation-duration $animation-timing-function;
-    @media screen and (min-width: $mobile) and (max-width: 767px) {
-     
-    }
-    @media screen and (min-width: $tablet) and (max-width: 1199px) {
-    }
-    @media screen and (min-width: $desktop) {
-      
-
-     
-    }
-   
   }
 
   &__btn:hover,
@@ -86,22 +64,17 @@
 
 .project {
   &__list {
-    @media screen and (min-width: $mobile) and (max-width: 767px) {
+    @media screen and (min-width: $premobile) and (max-width: 767px) {
     }
     @media screen and (min-width: $tablet) and (max-width: 1199px) {
     }
     @media screen and (min-width: $desktop) {
       display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: -15px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: -15px;
     }
-    
   }
-
-  // &__item {
-  //   margin: 15px;
-  // }
 
   &__link:hover,
   &__link:focus {

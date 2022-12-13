@@ -1,11 +1,12 @@
+// @media screen and (min-width: $premobile) and (max-width: 767px)
+
 .header {
   &__container {
+    width: 100%;
     padding: 0 15px;
     margin: 0 auto;
 
-    outline: 1px solid lightgreen;
-
-    @media screen and (min-width: $mobile) and (max-width: 767px) {
+    @media screen and (min-width: $premobile) and (max-width: 767px) {
       position: relative;
       width: 480px;
     }
@@ -21,7 +22,7 @@
 
   &__logo {
     color: $text-main;
-    @media screen and (min-width: $mobile) and (max-width: 767px) {
+    @media screen and (min-width: $premobile) and (max-width: 767px) {
       display: block;
       padding-top: 16px;
       padding-bottom: 16px;
@@ -48,7 +49,7 @@
   font-size: 24px;
   line-height: calc(28 / 24);
 
-  @media screen and (min-width: $mobile) and (max-width: 767px) {
+  @media screen and (min-width: $premobile) and (max-width: 767px) {
   }
   @media screen and (min-width: $tablet) and (max-width: 1199px) {
   }
@@ -68,7 +69,7 @@
   &__list {
     display: flex;
     gap: 50px;
-    @media screen and (min-width: $mobile) and (max-width: 767px) {
+    @media screen and (min-width: $premobile) and (max-width: 767px) {
       display: none;
     }
     @media screen and (min-width: $tablet) and (max-width: 1199px) {
@@ -78,13 +79,12 @@
   }
 
   &__btn {
-    @media screen and (min-width: $mobile) and (max-width: 767px) {
+    @media screen and (min-width: $premobile) and (max-width: 767px) {
       position: absolute;
       top: 10px;
       right: 15px;
       border: none;
       background-color: transparent;
-
     }
     @media screen and (min-width: $tablet) and (max-width: 1199px) {
       display: none;
@@ -107,12 +107,6 @@
 
   color: inherit;
   transition: color var(--animation-duration) var(--animation-timing-function);
-  @media screen and (min-width: $mobile) and (max-width: 767px) {
-  }
-  @media screen and (min-width: $tablet) and (max-width: 1199px) {
-  }
-  @media screen and (min-width: $desktop) {
-  }
 
   &:hover,
   &:focus {
@@ -122,12 +116,6 @@
 
 .menu__link-active {
   color: $activity-blue;
-  @media screen and (min-width: $mobile) and (max-width: 767px) {
-  }
-  @media screen and (min-width: $tablet) and (max-width: 1199px) {
-  }
-  @media screen and (min-width: $desktop) {
-  }
 
   &::after {
     display: block;
@@ -139,12 +127,15 @@
     bottom: 0;
     background-color: $activity-blue;
     border-radius: 2px;
+    @media screen and (min-width: $premobile) and (max-width: 767px) {
+      display: none;
+    }
   }
 }
 
 .contact {
   &__list {
-    @media screen and (min-width: $mobile) and (max-width: 767px) {
+    @media screen and (min-width: $premobile) and (max-width: 767px) {
       display: none;
     }
     @media screen and (min-width: $tablet) and (max-width: 1199px) {
@@ -160,21 +151,12 @@
     }
   }
 
-  &__item {
-    @media screen and (min-width: $mobile) and (max-width: 767px) {
-    }
-    @media screen and (min-width: $tablet) and (max-width: 1199px) {
-    }
-    @media screen and (min-width: $desktop) {
-    }
-  }
-
   &__link {
     font-weight: 500;
     letter-spacing: 0.02em;
     color: $text-grey;
     transition: color $animation-duration $animation-timing-function;
-    @media screen and (min-width: $mobile) and (max-width: 767px) {
+    @media screen and (min-width: $premobile) and (max-width: 767px) {
     }
     @media screen and (min-width: $tablet) and (max-width: 1199px) {
       font-size: 12px;
@@ -196,7 +178,7 @@
     fill: currentColor;
     width: 14px;
     height: 10px;
-    @media screen and (min-width: $mobile) and (max-width: 767px) {
+    @media screen and (min-width: $premobile) and (max-width: 767px) {
     }
     @media screen and (min-width: $tablet) and (max-width: 1199px) {
       margin-right: 8px;
@@ -212,5 +194,129 @@
   &__link:hover,
   &__link:focus {
     color: $activity-blue;
+  }
+}
+
+.menu-box {
+  @media screen and (min-width: $premobile) and (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    outline: 1px solid khaki;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+
+    position: fixed;
+    background-color: $text-white;
+    color: $text-main;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 3;
+
+    padding: 48px 40px;
+    transform: translateX(150%);
+    transition: transform $animation-duration $animation-timing-function;
+  }
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    display: none;
+  }
+  @media screen and (min-width: $desktop) {
+    display: none;
+  }
+
+  &__list {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: calc(47 / 40);
+    letter-spacing: 0.02em;
+
+    color: $text-main;
+  }
+  &__item {
+    margin-bottom: 37px;
+  }
+  &__link {
+    color: inherit;
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  &__tel {
+    display: inline-block;
+    margin-bottom: 32px;
+
+    font-size: 34px;
+    line-height: calc(40 / 34);
+
+    color: $activity-blue;
+  }
+
+  &__mail {
+    display: inline-block;
+    margin-bottom: 64px;
+
+    font-size: 24px;
+    line-height: calc(28 / 24);
+    letter-spacing: 0.02em;
+
+    color: $text-grey;
+  }
+}
+
+.menu-box.is-open {
+  transform: translateX(0);
+}
+
+.menu__link-active {
+  color: $activity-blue;
+}
+
+.box-social {
+  display: flex;
+  gap: 10px;
+  margin-top: auto;
+  margin-bottom: 0;
+
+  &__item {
+    padding-right: 10px;
+  }
+
+  &__item:not(:last-child) {
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+  }
+  &__link {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: calc(22 / 18);
+
+    letter-spacing: 0.02em;
+
+    color: $activity-blue;
+  }
+}
+
+.box {
+  &__close-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 10px;
+    right: 15px;
+
+    transition: fill $animation-duration $animation-timing-function;
+    background-color: transparent;
+    border: none;
+  }
+  &__close-btn:active {
+    fill: $activity-blue;
   }
 }

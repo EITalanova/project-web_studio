@@ -1,8 +1,7 @@
-
-
 .about-us {
+  width: 100%;
   margin: 0 auto;
-  @media screen and (min-width: $mobile) and (max-width: 767px) {
+  @media screen and (min-width: $premobile) and (max-width: 767px) {
     width: 480px;
     padding: 60px 15px;
   }
@@ -32,7 +31,7 @@
   }
 
   &__table {
-    @media screen and (min-width: $mobile) and (max-width: 767px) {
+    @media screen and (min-width: $premobile) and (max-width: 767px) {
       margin: -15px;
     }
     @media screen and (min-width: $tablet) and (max-width: 1199px) {
@@ -53,22 +52,14 @@
     background-color: $back-lgrey;
     padding: 25px 0;
     margin-bottom: 30px;
-    @media screen and (min-width: $mobile) and (max-width: 767px) {
-    }
-    @media screen and (min-width: $tablet) and (max-width: 1199px) {
-    }
-    @media screen and (min-width: $desktop) {
-      margin-bottom: 30px;
-    }
   }
 
   &__item {
-   
-    @media screen and (min-width: $mobile) and (max-width: 767px) {
+    @media screen and (min-width: $premobile) and (max-width: 767px) {
       margin: 15px;
     }
     @media screen and (min-width: $tablet) and (max-width: 1199px) {
-      width: calc((100% - 30px)/2);
+      width: calc((100% - 30px) / 2);
     }
     @media screen and (min-width: $desktop) {
       margin: 15px;
@@ -83,7 +74,7 @@
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    @media screen and (min-width: $mobile) and (max-width: 767px) {
+    @media screen and (min-width: $premobile) and (max-width: 767px) {
     }
     @media screen and (min-width: $tablet) and (max-width: 1199px) {
       text-align: start;
@@ -99,11 +90,5 @@
     letter-spacing: 0.03em;
 
     color: $text-grey;
-    @media screen and (min-width: $mobile) and (max-width: 767px) {
-    }
-    @media screen and (min-width: $tablet) and (max-width: 1199px) {
-    }
-    @media screen and (min-width: $desktop) {
-    }
   }
 }
