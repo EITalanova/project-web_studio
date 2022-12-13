@@ -1,8 +1,9 @@
 .hero {
+  width: 100%;
   text-align: center;
   margin: 0 auto;
 
-  background-size: 100% auto;
+  // background-size: 100% auto;
   background-color: $back-grey;
   background-image: url(../images/hero/hero-mobile.jpg);
 
@@ -34,6 +35,7 @@
   }
   @media screen and (min-width: $desktop) {
     position: relative;
+    width: 1200px;
     max-width: 1600px;
     padding: 200px 0;
     margin: 0 auto;
