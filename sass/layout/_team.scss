@@ -1,14 +1,14 @@
-// // .picture {
-// //   width: 100%;
-// }
 .team {
+  width: 100%;
   background-color: $back-lgrey;
-
+  
   &__container {
+    background-color: $back-lgrey;
     margin: 0 auto;
     padding: 60px 15px;
     @media screen and (min-width: $premobile) and (max-width: 767px) {
-      width: 480px;
+      
+    width: 480px;
     }
     @media screen and (min-width: $tablet) and (max-width: 1199px) {
       width: 768px;
