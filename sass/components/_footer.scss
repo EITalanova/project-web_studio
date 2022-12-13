@@ -1,125 +1,244 @@
+@media screen and (min-width: $mobile) and (max-width: 767px) {
+}
+@media screen and (min-width: $tablet) and (max-width: 1199px) {
+}
+@media screen and (min-width: $desktop) {
+}
+
 .footer {
-    background-color: $back-grey;
-  
-    &__section {
+  background-color: $back-grey;
+
+  &__section {
+    margin: 0 auto;
+
+    padding: 60px 0;
+ 
+    @media screen and (min-width: $mobile) and (max-width: 767px) {
+      width: 480px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      width: 768px;
+      padding: 60px 15px;
+      flex-wrap: wrap;
+    }
+    @media screen and (min-width: $desktop) {
       width: 1200px;
       display: flex;
-      margin: 0 auto;
+
       padding-left: 15px;
       align-items: baseline;
-      padding-top: 60px;
-      padding-bottom: 60px;
-    }
-  
-    &__logo {
-      display: block;
-      margin-bottom: 20px;
-      margin-right: 0;
-      padding: 0;
-  
-      color: $text-white;
-    }
-  
-    &__contacts {
-      margin-right: 70px;
-    }
-  
-    &__contacts-details {
-      font-style: inherit;
-    }
-  
-    &__item:not(:last-child) {
-      margin-bottom: 9px;
-    }
-  
-    &__address {
-      margin: 0 0 9px 0;
-  
-      color: $text-white;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 1.71;
-      letter-spacing: 0.03em;
-    }
-  
-    &__link {
-      color: rgba(255, 255, 255, 0.6);
-      font-style: inherit;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 1.71;
-      letter-spacing: 0.03em;
-  
-      transition: color $animation-duration $animation-timing-function;
-    }
-  
-    &__link:hover,
-    &__link:focus {
-      color: $activity-blue;
-    }
-  
-    &__text {
-      margin-bottom: 20px;
-  
-      font-weight: 700;
-      font-size: 14px;
-      line-height: 1.14;
-      letter-spacing: 0.03em;
-      text-transform: uppercase;
-  
-      color: #ffffff;
-    }
-  
-    &__join {
-      margin-right: 93px;
-    }
-  
-    &__box {
-      display: flex;
-    }
-  
-    &__label {
-      display: flex;
-      margin-bottom: 20px;
-      display: inline-block;
-      align-items: baseline;
-  
-      color: $text-white;
-      font-weight: 700;
-      font-size: 14px;
-      line-height: calc(16 / 14);
-      letter-spacing: 0.03em;
-      text-transform: uppercase;
-      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    }
-  
-    &__field {
-      align-items: baseline;
-      margin-right: 12px;
-      padding: 15px;
-      min-width: 385px;
-  
-      font-weight: 400;
-      font-size: 16px;
-      line-height: calc(20 / 16);
-      color: rgba(255, 255, 255, 0.6);
-  
-      background-color: transparent;
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-      border-radius: 4px;
-    }
-  
-    &__btn {
-      @extend %centering-for-flex;
-      height: 50px;
-      width: 200px;
-      padding: 0;
-  
-      line-height: calc(30 / 16);
-    }
-  
-    &__icon {
-      margin-left: 10px;
     }
   }
+
+  &__logo {
+    display: block;
+    margin-bottom: 20px;
+    padding: 0;
+
+    color: $text-white;
+    @media screen and (min-width: $mobile) and (max-width: 767px) {
+    }
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+      text-align: center;
+    }
+    @media screen and (min-width: $desktop) {
+      margin-right: 0;
+    }
+  }
+
+  &__contacts {
+    @media screen and (min-width: $mobile) and (max-width: 767px) {
+    }
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+text-align: center;
+    margin-right: 165px;
+      margin-left: 0;
+      margin-bottom: 60px;
+    }
+    @media screen and (min-width: $desktop) {
+      margin-right: 70px;
+    }
+  }
+
+  &__contacts-details {
+    font-style: inherit;
+    @media screen and (min-width: $mobile) and (max-width: 767px) {
+      margin-bottom: 60px;
+    }
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    }
+    @media screen and (min-width: $desktop) {
+    }
+  }
+
+  &__item:not(:last-child) {
+    @media screen and (min-width: $mobile) and (max-width: 767px) {
+    }
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+      margin-bottom: 8px;
+    }
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 9px;
+    }
+  }
+
+  &__address {
+    color: $text-white;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    @media screen and (min-width: $mobile) and (max-width: 767px) {
+    }
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+      margin-bottom: 8px;
+    }
+    @media screen and (min-width: $desktop) {
+      margin: 0 0 9px 0;
+      margin-right: 60px;
+    }
+  }
+
+  &__link {
+    color: rgba(255, 255, 255, 0.6);
+    font-style: inherit;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+
+    transition: color $animation-duration $animation-timing-function;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: $activity-blue;
+  }
+
+  &__text {
+    margin-bottom: 20px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: #ffffff;
+    @media screen and (min-width: $mobile) and (max-width: 767px) {
+    }
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+      text-align: center;
+    }
+    @media screen and (min-width: $desktop) {
+     
+    }
+   
+  }
+
+  &__join {
+    @media screen and (min-width: $mobile) and (max-width: 767px) {
+      margin-bottom: 60px;
+    }
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+      margin-bottom: 60px;
+    
+    }
+    @media screen and (min-width: $desktop) {
+      margin-right: 93px;
+    }
+  }
+
+  &__subscription {
+    @media screen and (min-width: $mobile) and (max-width: 767px) {
+    }
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+      display: flex;
+      margin: 0 auto;
+    }
+    @media screen and (min-width: $desktop) {
+    }
+  }
+
+  &__box {
+    margin: 0 auto;
+    @media screen and (min-width: $mobile) and (max-width: 767px) {
+    }
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    }
+    @media screen and (min-width: $desktop) {
+      display: flex;
+    }
+  }
+
+  &__label {
+    
+    margin-bottom: 20px;
+    display: block;
+   text-align: center;
+
+    color: $text-white;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  &__field {
+    padding: 15px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: calc(20 / 16);
+    color: rgba(255, 255, 255, 0.6);
+
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    @media screen and (min-width: $mobile) and (max-width: 767px) {
+      width: 100%;
+      margin-bottom: 20px;
+      max-width: 450px;
+    }
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+      width: 100%;
+      margin-bottom: 20px;
+      width: 450px;
+    }
+    @media screen and (min-width: $desktop) {
+      align-items: baseline;
+      margin-right: 12px;
+      min-width: 385px;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 200px;
+    padding: 0;
+    margin: 0 auto;
+
+    line-height: calc(30 / 16);
+    @media screen and (min-width: $mobile) and (max-width: 767px) {
+    }
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    }
+    @media screen and (min-width: $desktop) {
+    }
+  }
+
+  &__icon {
+    margin-left: 10px;
+  }
+}

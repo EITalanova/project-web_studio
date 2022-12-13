@@ -1,28 +1,62 @@
+
+
 .header {
   &__container {
-    display: flex;
-    align-items: center;
-    width: 1200px;
     padding: 0 15px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  &__logo {
-    margin-right: 93px;
-    padding-top: 24px;
-    padding-bottom: 25px;
+    margin: 0 auto;
 
-    color: $text-black;
+    outline: 1px solid lightgreen;
+
+    @media screen and (min-width: $mobile) and (max-width: 767px) {
+      width: 480px;
+    }
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+      display: flex;
+      width: 768px;
+    }
+    @media screen and (min-width: $desktop) {
+      display: flex;
+      width: 1200px;
+    }
+  }
+
+  &__logo {
+    color: $text-main;
+    @media screen and (min-width: $mobile) and (max-width: 767px) {
+      display: block;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      margin-left: auto;
+    }
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+      padding-top: 26px;
+      padding-bottom: 26px;
+    }
+    @media screen and (min-width: $desktop) {
+      margin-right: 93px;
+      padding-top: 24px;
+      padding-bottom: 25px;
+
+      color: $text-black;
+    }
   }
 }
 
 .logo {
   font-family: "Raleway", sans-serif;
-
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
   letter-spacing: 0.03em;
+  font-size: 24px;
+  line-height: calc(28 / 24);
+
+  @media screen and (min-width: $mobile) and (max-width: 767px) {
+  }
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 26px;
+    line-height: calc(28 / 26);
+  }
 
   &--text-blue {
     color: $activity-blue;
@@ -30,16 +64,27 @@
 }
 
 .menu {
+  margin-right: auto;
+  margin-left: auto;
   &__list {
     display: flex;
+    gap: 50px;
+    @media screen and (min-width: $mobile) and (max-width: 767px) {
+      display: none;
+    }
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    }
+    @media screen and (min-width: $desktop) {
+    }
   }
 
   &__item {
-    margin-right: 50px;
-  }
-
-  &__item:last-child {
-    margin-right: 0;
+    @media screen and (min-width: $mobile) and (max-width: 767px) {
+    }
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    }
+    @media screen and (min-width: $desktop) {
+    }
   }
 }
 
@@ -55,6 +100,12 @@
 
   color: inherit;
   transition: color var(--animation-duration) var(--animation-timing-function);
+  @media screen and (min-width: $mobile) and (max-width: 767px) {
+  }
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+  }
+  @media screen and (min-width: $desktop) {
+  }
 
   &:hover,
   &:focus {
@@ -64,6 +115,12 @@
 
 .menu__link-active {
   color: $activity-blue;
+  @media screen and (min-width: $mobile) and (max-width: 767px) {
+  }
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+  }
+  @media screen and (min-width: $desktop) {
+  }
 
   &::after {
     display: block;
@@ -80,39 +137,64 @@
 
 .contact {
   &__list {
-    display: flex;
-    margin-right: 0;
-    margin-left: auto;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding: 0;
+    @media screen and (min-width: $mobile) and (max-width: 767px) {
+      display: none;
+    }
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding-top: 21px;
+      padding-bottom: 21px;
+    }
+    @media screen and (min-width: $desktop) {
+      display: flex;
+      gap: 30px;
+    }
   }
 
   &__item {
-    margin-right: 50px;
-  }
-
-  &__item:last-child {
-    margin-right: 0;
+    @media screen and (min-width: $mobile) and (max-width: 767px) {
+    }
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    }
+    @media screen and (min-width: $desktop) {
+    }
   }
 
   &__link {
-    @extend %centering-for-flex;
-
     font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
     letter-spacing: 0.02em;
-    padding-top: 32px;
-    padding-bottom: 32px;
-
     color: $text-grey;
     transition: color $animation-duration $animation-timing-function;
+    @media screen and (min-width: $mobile) and (max-width: 767px) {
+    }
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+      font-size: 12px;
+      line-height: calc(14 / 12);
+    }
+    @media screen and (min-width: $desktop) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 32px;
+      padding-bottom: 32px;
+
+      font-size: 14px;
+      line-height: 1.14;
+    }
   }
 
   &__icon {
     fill: currentColor;
-    margin-right: 10px;
+    @media screen and (min-width: $mobile) and (max-width: 767px) {
+    }
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+      margin-right: 8px;
+    }
+    @media screen and (min-width: $desktop) {
+      margin-right: 10px;
+    }
   }
 
   &__link:hover,
@@ -120,3 +202,4 @@
     color: $activity-blue;
   }
 }
+

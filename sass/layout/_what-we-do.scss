@@ -1,4 +1,13 @@
 .what-we-do {
+  display: none;
+  @media screen and (min-width: $mobile) and (max-width: 767px) {
+    display: none;
+  }
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    display: none;
+  }
+  @media screen and (min-width: $desktop) {
+ 
     width: 1200px;
     margin: 0 auto;
   
@@ -14,7 +23,9 @@
     }
   
     &__overlay {
-      @extend %centering-for-flex;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       position: absolute;
       width: 100%;
       bottom: 0;
@@ -33,3 +44,4 @@
       color: $text-white;
     }
   }
+}

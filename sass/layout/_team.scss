@@ -1,84 +1,149 @@
+@media screen and (min-width: $mobile) and (max-width: 767px) {
+}
+@media screen and (min-width: $tablet) and (max-width: 1199px) {
+}
+@media screen and (min-width: $desktop) {
+}
+
 .team {
-    background-color: $back-lgrey;
-  
-    &__container {
+  background-color: $back-lgrey;
+
+  &__container {
+    margin: 0 auto;
+    padding: 60px 15px;
+    @media screen and (min-width: $mobile) and (max-width: 767px) {
+      width: 480px;
+    }
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+      width: 768px;
+    }
+    @media screen and (min-width: $desktop) {
       width: 1200px;
       padding-top: 94px;
-      margin: 0 auto;
     }
-  
-    &__info {
+  }
+
+  &__info {
+    padding-bottom: 24px;
+    padding-top: 30px;
+    @media screen and (min-width: $mobile) and (max-width: 767px) {
+    }
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    }
+    @media screen and (min-width: $desktop) {
       padding-bottom: 30px;
-      padding-top: 30px;
     }
-  
-    &__list {
+  }
+
+  &__list {
+    // margin: -15px;
+    @media screen and (min-width: $mobile) and (max-width: 767px) {
+    }
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
       display: flex;
       justify-content: center;
-      margin: -15px;
+      flex-wrap: wrap;
+      gap: 30px;
     }
-  
-    &__name {
-      margin: 0 0 10px 0;
-  
-      text-align: center;
-      font-weight: 500;
-      font-size: 16px;
-      line-height: 1.19;
-      letter-spacing: 0.03em;
-    }
-    &__item {
-      margin: 15px;
-  
-      background-color: $text-white;
-      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-        0px 2px 1px rgba(0, 0, 0, 0.2);
-      border-radius: 0px 0px 4px 4px;
-    }
-    &__post {
-      text-align: center;
-      margin-bottom: 16px;
-  
-      color: $text-grey;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 1.88;
-      letter-spacing: 0.03em;
+    @media screen and (min-width: $desktop) {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
     }
   }
-  
-  .social-networks {
-    @extend %centering-for-flex;
-    margin: -5px;
-  
-    &__item {
-      margin: 5px;
+
+  &__name {
+    margin: 0 0 10px 0;
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    @media screen and (min-width: $mobile) and (max-width: 767px) {
+      margin-bottom: 8px;
     }
-  
-    &__link {
-      @extend %centering-for-flex;
-      width: 44px;
-      height: 44px;
-  
-      border-radius: 50%;
-      color: $icon-grey;
-      transition: color $animation-duration $animation-timing-function,
-        background-color $animation-duration $animation-timing-function;
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
     }
-  
-    &__link:hover,
-    &__link:focus {
-      color: $text-white;
-      background-color: $activity-blue;
-    }
-  
-    &__link--dark {
-      background-color: rgba(255, 255, 255, 0.1);
-    }
-  
-    &__icon {
-      fill: currentColor;
+    @media screen and (min-width: $desktop) {
+   
     }
   }
-  
-  
+  &__item {
+    // margin: 15px;
+    background-color: $text-white;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    @media screen and (min-width: $mobile) and (max-width: 767px) {
+     
+    }
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+      width: calc(((100% - 30px))/2);
+    }
+    @media screen and (min-width: $desktop) {
+    }
+  }
+  &__post {
+    text-align: center;
+    margin-bottom: 16px;
+
+    color: $text-grey;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.03em;
+  }
+}
+
+.title {
+  @media screen and (min-width: $mobile) and (max-width: 767px) {
+    margin-bottom: 30px;
+    font-size: 28px;
+    line-height: calc(33/28);
+
+  }
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    font-size: 28px;
+    line-height: calc(33/28);
+  }
+  @media screen and (min-width: $desktop) {
+  }
+}
+
+.social-networks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  // &__item {
+  //   // margin: 5px;
+  // }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+
+    border-radius: 50%;
+    color: $icon-grey;
+    transition: color $animation-duration $animation-timing-function,
+      background-color $animation-duration $animation-timing-function;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: $text-white;
+    background-color: $activity-blue;
+  }
+
+  &__link--dark {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  &__icon {
+    fill: currentColor;
+  }
+}
