@@ -12,7 +12,7 @@
     margin: 0 auto;
 
     padding: 60px 0;
- 
+
     @media screen and (min-width: $mobile) and (max-width: 767px) {
       width: 480px;
       margin: 0 auto;
@@ -55,8 +55,8 @@
     @media screen and (min-width: $mobile) and (max-width: 767px) {
     }
     @media screen and (min-width: $tablet) and (max-width: 1199px) {
-text-align: center;
-    margin-right: 165px;
+      text-align: center;
+      margin-right: 165px;
       margin-left: 0;
       margin-bottom: 60px;
     }
@@ -136,9 +136,7 @@ text-align: center;
       text-align: center;
     }
     @media screen and (min-width: $desktop) {
-     
     }
-   
   }
 
   &__join {
@@ -147,7 +145,6 @@ text-align: center;
     }
     @media screen and (min-width: $tablet) and (max-width: 1199px) {
       margin-bottom: 60px;
-    
     }
     @media screen and (min-width: $desktop) {
       margin-right: 93px;
@@ -177,10 +174,9 @@ text-align: center;
   }
 
   &__label {
-    
     margin-bottom: 20px;
     display: block;
-   text-align: center;
+    text-align: center;
 
     color: $text-white;
     font-weight: 700;
@@ -189,6 +185,14 @@ text-align: center;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    @media screen and (min-width: $mobile) and (max-width: 767px) {
+    }
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    }
+    @media screen and (min-width: $desktop) {
+      display: flex;
+      text-align: left;
+    }
   }
 
   &__field {

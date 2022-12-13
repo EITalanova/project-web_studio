@@ -189,6 +189,7 @@ body {
 }
 @media screen and (min-width: 480px) and (max-width: 767px) {
   .header__container {
+    position: relative;
     width: 480px;
   }
 }
@@ -260,6 +261,26 @@ body {
     display: none;
   }
 }
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .menu__btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    border: none;
+    background-color: transparent;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .menu__btn {
+    display: none;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .menu__btn {
+    display: none;
+  }
+}
+
 .menu__link {
   position: relative;
   display: block;
@@ -301,8 +322,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding-top: 21px;
-    padding-bottom: 21px;
+    justify-content: center;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -336,6 +356,8 @@ body {
 }
 .contact__icon {
   fill: currentColor;
+  width: 14px;
+  height: 10px;
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .contact__icon {
@@ -344,6 +366,8 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .contact__icon {
+    width: 16px;
+    height: 12px;
     margin-right: 10px;
   }
 }
@@ -611,6 +635,10 @@ body {
   }
 }
 
+.picture {
+  width: 100%;
+}
+
 .team {
   background-color: #f5f4fa;
 }
@@ -643,19 +671,24 @@ body {
     padding-bottom: 30px;
   }
 }
+.team__list {
+  display: flex;
+  gap: 30px;
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .team__list {
+    flex-direction: column;
+  }
+}
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .team__list {
-    display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 30px;
   }
 }
 @media screen and (min-width: 1200px) {
   .team__list {
-    display: flex;
     justify-content: center;
-    gap: 30px;
   }
 }
 .team__name {
@@ -960,6 +993,12 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+@media screen and (min-width: 1200px) {
+  .footer__label {
+    display: flex;
+    text-align: left;
+  }
 }
 .footer__field {
   padding: 15px;
