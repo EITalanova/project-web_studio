@@ -1,9 +1,11 @@
 .hero {
   position: relative;
   width: 100%;
+  height: auto;
   text-align: center;
   margin: 0 auto;
 
+  background-size: 100% auto;
   background-color: $back-grey;
   background-image: url(../images/hero/hero-mobile.jpg);
 
@@ -35,7 +37,7 @@
   }
   @media screen and (min-width: $desktop) {
     
-    max-width: 1600px;
+    min-width: 1200px;
     padding: 200px 0;
     margin: 0 auto;
     background-image: url(../images/hero/hero-desktop.jpg);
@@ -43,6 +45,7 @@
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
       background-image: url(../images/hero/hero-desktop@2x.jpg);
+      background-size: cover;
     }
   }
 
