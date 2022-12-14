@@ -224,7 +224,6 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .header__logo {
-    margin-right: 93px;
     padding-top: 24px;
     padding-bottom: 25px;
     color: #000;
@@ -493,10 +492,12 @@ body {
 .hero {
   position: relative;
   width: 100%;
+  max-width: 1600px;
   height: auto;
   text-align: center;
   margin: 0 auto;
-  background-size: 100% auto;
+  background-position: center;
+  background-size: cover;
   background-color: #2f303a;
   background-image: url(../images/hero/hero-mobile.jpg);
 }
@@ -549,8 +550,6 @@ body {
   height: 100%;
   top: 0;
   left: 0;
-}
-.hero:hover .hero__overlay {
   background-color: rgba(47, 48, 58, 0.4);
 }
 .hero__title {

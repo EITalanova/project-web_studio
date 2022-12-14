@@ -1,11 +1,13 @@
 .hero {
   position: relative;
   width: 100%;
+  max-width: 1600px;
   height: auto;
   text-align: center;
   margin: 0 auto;
 
-  background-size: 100% auto;
+  background-position: center;
+  background-size: cover;
   background-color: $back-grey;
   background-image: url(../images/hero/hero-mobile.jpg);
 
@@ -36,7 +38,6 @@
     }
   }
   @media screen and (min-width: $desktop) {
-    
     min-width: 1200px;
     padding: 200px 0;
     margin: 0 auto;
@@ -55,11 +56,12 @@
     height: 100%;
     top: 0;
     left: 0;
-  }
-
-  &:hover .hero__overlay {
     background-color: rgba(47, 48, 58, 0.4);
   }
+
+  // &:hover .hero__overlay {
+  //   background-color: rgba(47, 48, 58, 0.4);
+  // }
 
   &__title {
     position: relative;
