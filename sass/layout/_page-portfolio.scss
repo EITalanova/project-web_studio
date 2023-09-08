@@ -20,19 +20,20 @@
 .filter {
   &__list {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 15px 8px;
     padding: 0;
     @media screen and (min-width: $premobile) and (max-width: 767px) {
-      justify-content: start;
       flex-wrap: wrap;
       max-width: 326px;
       margin-bottom: 40px;
     }
     @media screen and (min-width: $tablet) and (max-width: 1199px) {
+      justify-content: center;
       margin-bottom: 30px;
     }
     @media screen and (min-width: $desktop) {
+      justify-content: center;
       margin: 0 0 50px 0;
     }
   }
@@ -64,16 +65,51 @@
 
 .project {
   &__list {
-    @media screen and (min-width: $premobile) and (max-width: 767px) {
-    }
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 30px;
+
     @media screen and (min-width: $tablet) and (max-width: 1199px) {
+      flex-direction: row;
+      align-items: stretch;
+      gap: 30px;
     }
     @media screen and (min-width: $desktop) {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin: -15px;
+      flex-direction: row;
+      gap: 30px;
     }
+  }
+
+  &__item {
+    width: 100%;
+
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+      width: calc((100% - 30px) / 2);
+    }
+    @media screen and (min-width: $desktop) {
+      width: calc((100% - 60px) / 3);
+    }
+  }
+
+  &__img {
+    width: 450px;
+    height: 294px;
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+      width: auto;
+    }
+
+    @media screen and (min-width: $desktop) {
+      width: auto;
+    }
+  }
+
+  &__link {
+    display: block;
+    color: inherit;
+    text-decoration: inherit;
+    transition: background-color $animation-duration $animation-timing-function,
+      box-shadow $animation-duration $animation-timing-function;
   }
 
   &__link:hover,
@@ -87,14 +123,7 @@
     border-right: 1px solid rgba(238, 238, 238, 1);
     border-left: 1px solid rgba(238, 238, 238, 1);
     border-bottom: 1px solid rgba(238, 238, 238, 1);
-  }
-
-  &__link {
-    display: block;
-    color: inherit;
-    text-decoration: inherit;
-    transition: background-color $animation-duration $animation-timing-function,
-      box-shadow $animation-duration $animation-timing-function;
+    
   }
 
   &__title {

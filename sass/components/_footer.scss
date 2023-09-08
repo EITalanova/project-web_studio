@@ -1,13 +1,11 @@
 .footer {
   width: 100%;
-background-color: $back-grey;
+  background-color: $back-grey;
 
   &__section {
     background-color: $back-grey;
     margin: 0 auto;
     padding: 60px 0;
-
-   
 
     @media screen and (min-width: $premobile) and (max-width: 767px) {
       width: 480px;
@@ -206,7 +204,6 @@ background-color: $back-grey;
     @media screen and (min-width: $premobile) and (max-width: 767px) {
       width: 100%;
       margin-bottom: 20px;
-      max-width: 450px;
     }
     @media screen and (min-width: $tablet) and (max-width: 1199px) {
       width: 100%;
